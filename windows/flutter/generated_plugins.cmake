@@ -4,6 +4,7 @@
 
 list(APPEND FLUTTER_PLUGIN_LIST
   connectivity_plus
+  demo_plugin
   permission_handler_windows
   url_launcher_windows
 )

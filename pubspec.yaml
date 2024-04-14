@@ -18,6 +18,9 @@ dependencies:
   flutter_util:
     path: ./submodule/flutter_util
 
+  demo_plugin:
+    path: ./plugin/demo_plugin
+
   cupertino_icons: ^1.0.2
   # get--最新4.6.6
   get: ^4.6.6
@@ -34,6 +37,8 @@ dependencies:
   dio: ^5.2.1
   intl: ^0.18.1
   rxdart: ^0.27.7
+  # 代理配置
+  shelf_proxy: ^1.0.1
 
 
 dev_dependencies:
