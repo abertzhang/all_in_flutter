@@ -14,7 +14,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   final plugin = UtilPlugin();
-  int? sum = 0;
+  String? proxyInfo;
   String? version;
   @override
   void initState() {
@@ -24,7 +24,7 @@ class _HomePageState extends State<HomePage> {
 
   Future initData() async {
     version = await plugin.getPlatformVersion() ?? 'nothing';
-    // sum = await plugin.add();
+    proxyInfo = await plugin.getProxyInfo();
     setState(() {});
   }
 
@@ -33,8 +33,10 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(),
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text('$version ,$sum'),
+          Text('sdk版本号:$version '),
+          Text('代理信息:$proxyInfo'),
         ],
       ),
     );
