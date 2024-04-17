@@ -6,14 +6,14 @@
 
 #include "generated_plugin_registrant.h"
 
-#include <demo_plugin/demo_plugin.h>
 #include <url_launcher_linux/url_launcher_plugin.h>
+#include <util_plugin/util_plugin.h>
 
 void fl_register_plugins(FlPluginRegistry* registry) {
-  g_autoptr(FlPluginRegistrar) demo_plugin_registrar =
-      fl_plugin_registry_get_registrar_for_plugin(registry, "DemoPlugin");
-  demo_plugin_register_with_registrar(demo_plugin_registrar);
   g_autoptr(FlPluginRegistrar) url_launcher_linux_registrar =
       fl_plugin_registry_get_registrar_for_plugin(registry, "UrlLauncherPlugin");
   url_launcher_plugin_register_with_registrar(url_launcher_linux_registrar);
+  g_autoptr(FlPluginRegistrar) util_plugin_registrar =
+      fl_plugin_registry_get_registrar_for_plugin(registry, "UtilPlugin");
+  util_plugin_register_with_registrar(util_plugin_registrar);
 }

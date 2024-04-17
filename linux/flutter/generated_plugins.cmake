@@ -3,8 +3,8 @@
 #
 
 list(APPEND FLUTTER_PLUGIN_LIST
-  demo_plugin
   url_launcher_linux
+  util_plugin
 )
 
 list(APPEND FLUTTER_FFI_PLUGIN_LIST

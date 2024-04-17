@@ -1,5 +1,5 @@
-import 'package:demo_plugin/demo_plugin.dart';
 import 'package:flutter/material.dart';
+import 'package:util_plugin/util_plugin.dart';
 
 void main() => runApp(const MaterialApp(
       home: HomePage(),
@@ -13,7 +13,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  final plugin = DemoPlugin();
+  final plugin = UtilPlugin();
   int? sum = 0;
   String? version;
   @override
@@ -24,7 +24,7 @@ class _HomePageState extends State<HomePage> {
 
   Future initData() async {
     version = await plugin.getPlatformVersion() ?? 'nothing';
-    sum = await plugin.add();
+    // sum = await plugin.add();
     setState(() {});
   }
 
@@ -40,3 +40,19 @@ class _HomePageState extends State<HomePage> {
     );
   }
 }
+
+/*
+  String? proxyInfo = await DeviceProxy().getProxy();
+  HttpOverrides.global =ProxyHttpOverrides(proxyInfo);
+
+    String? proxyInfo;
+    DeviceProxy().getProxy().then((value) => proxyInfo = value);
+    (_dio.httpClientAdapter as DefaultHttpClientAdapter).onHttpClientCreate = (client) {
+      client.findProxy = (url) {
+        if (proxyInfo == null || proxyInfo == '') return 'DIRECT';
+        return "PROXY $proxyInfo";
+      };
+      //忽略证书
+      client.badCertificateCallback = (cert, host, port) => true;
+    };
+*/

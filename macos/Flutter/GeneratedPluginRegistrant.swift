@@ -6,7 +6,6 @@ import FlutterMacOS
 import Foundation
 
 import connectivity_plus
-import demo_plugin
 import flutter_image_compress_macos
 import package_info_plus
 import path_provider_foundation
@@ -14,11 +13,11 @@ import photo_manager
 import shared_preferences_foundation
 import sqflite
 import url_launcher_macos
+import util_plugin
 import video_player_avfoundation
 
 func RegisterGeneratedPlugins(registry: FlutterPluginRegistry) {
   ConnectivityPlugin.register(with: registry.registrar(forPlugin: "ConnectivityPlugin"))
-  DemoPlugin.register(with: registry.registrar(forPlugin: "DemoPlugin"))
   FlutterImageCompressMacosPlugin.register(with: registry.registrar(forPlugin: "FlutterImageCompressMacosPlugin"))
   FPPPackageInfoPlusPlugin.register(with: registry.registrar(forPlugin: "FPPPackageInfoPlusPlugin"))
   PathProviderPlugin.register(with: registry.registrar(forPlugin: "PathProviderPlugin"))
@@ -26,5 +25,6 @@ func RegisterGeneratedPlugins(registry: FlutterPluginRegistry) {
   SharedPreferencesPlugin.register(with: registry.registrar(forPlugin: "SharedPreferencesPlugin"))
   SqflitePlugin.register(with: registry.registrar(forPlugin: "SqflitePlugin"))
   UrlLauncherPlugin.register(with: registry.registrar(forPlugin: "UrlLauncherPlugin"))
+  UtilPlugin.register(with: registry.registrar(forPlugin: "UtilPlugin"))
   FVPVideoPlayerPlugin.register(with: registry.registrar(forPlugin: "FVPVideoPlayerPlugin"))
 }

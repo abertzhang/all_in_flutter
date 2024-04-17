@@ -201,13 +201,6 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "2.3.3"
-  demo_plugin:
-    dependency: "direct main"
-    description:
-      path: "plugin/demo_plugin"
-      relative: true
-    source: path
-    version: "0.0.1"
   dio:
     dependency: "direct main"
     description:
@@ -1096,6 +1089,13 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "3.1.1"
+  util_plugin:
+    dependency: "direct main"
+    description:
+      path: "plugin/util_plugin"
+      relative: true
+    source: path
+    version: "0.0.1"
   uuid:
     dependency: transitive
     description:

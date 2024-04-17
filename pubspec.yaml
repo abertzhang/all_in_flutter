@@ -18,8 +18,8 @@ dependencies:
   flutter_util:
     path: ./submodule/flutter_util
 
-  demo_plugin:
-    path: ./plugin/demo_plugin
+  util_plugin:
+    path: ./plugin/util_plugin
 
   cupertino_icons: ^1.0.2
   # get--最新4.6.6
