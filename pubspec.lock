@@ -201,6 +201,13 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "2.3.3"
+  demo_plugin:
+    dependency: "direct main"
+    description:
+      path: "plugin/demo_plugin"
+      relative: true
+    source: path
+    version: "0.0.1"
   dio:
     dependency: "direct main"
     description:
@@ -892,6 +899,22 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "2.3.2"
+  shelf:
+    dependency: transitive
+    description:
+      name: shelf
+      sha256: ad29c505aee705f41a4d8963641f91ac4cee3c8fad5947e033390a7bd8180fa4
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "1.4.1"
+  shelf_proxy:
+    dependency: "direct main"
+    description:
+      name: shelf_proxy
+      sha256: a71d2307f4393211930c590c3d2c00630f6c5a7a77edc1ef6436dfd85a6a7ee3
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "1.0.4"
   sky_engine:
     dependency: transitive
     description: flutter
