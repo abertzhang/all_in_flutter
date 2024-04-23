@@ -12,6 +12,9 @@ dependencies:
     sdk: flutter
   # 是网络请求-最新5.4.3+1
   dio: ^5.4.3+1
+  # 连接方式--最新2.3.6
+  connectivity_plus: ^3.0.6
+  # 工具--最新3.0.0
 
 dev_dependencies:
   flutter_test:
