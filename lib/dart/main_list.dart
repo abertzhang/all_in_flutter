@@ -16,9 +16,6 @@ void main() {
 void listExpand() {
   Iterable<int> expandSingle(int n) sync* {
     yield n * n;
-    // for (int i = 1; i < n; i++) {
-    //   yield i * i;
-    // }
   }
 
   Iterable<int> expandMore(int n) sync* {
