@@ -1,4 +1,4 @@
-import 'http.dart';
+import '../net_dio.dart';
 
 class ErrorTokenInterceptor extends Interceptor {
   @override

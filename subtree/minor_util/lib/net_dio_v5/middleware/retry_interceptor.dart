@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:connectivity_plus/connectivity_plus.dart';
 
-import 'http.dart';
+import '../net_dio.dart';
 
 /// 重连拦截器
 class RetryOnConnectionChangeInterceptor extends Interceptor {

@@ -1,4 +1,4 @@
-import 'http.dart';
+import '../net_dio.dart';
 
 /// 缓存拦截器
 class NetCacheInterceptor extends Interceptor {
@@ -13,7 +13,7 @@ class NetCacheInterceptor extends Interceptor {
 
   @override
   onRequest(RequestOptions options, RequestInterceptorHandler handler) async {
-    if (!HttpUtil().isCache) return handler.next(options);
+    if (!NetDioUtil().isCache) return handler.next(options);
 
     // refresh标记是否是刷新缓存
     bool refresh = options.extra["refresh"] == true;
@@ -68,7 +68,7 @@ class NetCacheInterceptor extends Interceptor {
   @override
   onResponse(Response response, handler) async {
     // 如果启用缓存，将返回结果保存到缓存
-    if (HttpUtil().isCache) {
+    if (NetDioUtil().isCache) {
       await _saveCache(response);
     }
   }

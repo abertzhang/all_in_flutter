@@ -1,4 +1,4 @@
-import 'http.dart';
+import '../net_dio.dart';
 
 /// 错误处理拦截器
 class ErrorInterceptor extends Interceptor {

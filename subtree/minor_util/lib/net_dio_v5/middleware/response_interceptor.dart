@@ -1,8 +1,6 @@
 import 'dart:convert';
 
-import 'package:flutter/foundation.dart';
-
-import 'http.dart';
+import '../net_dio.dart';
 
 /// response拦截器
 class ResponseInterceptors extends Interceptor {
@@ -11,7 +9,7 @@ class ResponseInterceptors extends Interceptor {
     try {
       ///token失效处理
       if (response.statusCode == 200) {
-        if (HttpUtil().errTokenCode > 0) {
+        if (NetDioUtil().errTokenCode > 0) {
           int code = 0;
           if (response.data is String) {
             Map<String, dynamic> maps = json.decode(response.data);
@@ -20,7 +18,7 @@ class ResponseInterceptors extends Interceptor {
             code = response.data['code'];
           }
 
-          if (code == HttpUtil().errTokenCode) {
+          if (code == NetDioUtil().errTokenCode) {
             // ToastUtils.error('用户登录失效，请重新登录');
             // 延迟退出
             Future.delayed(const Duration(milliseconds: 500), () {

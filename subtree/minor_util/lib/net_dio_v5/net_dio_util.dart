@@ -1,12 +1,12 @@
 import 'package:dio/dio.dart';
 
-class HttpUtil {
+class NetDioUtil {
   //单例
-  HttpUtil._() {
+  NetDioUtil._() {
     init();
   }
-  static final HttpUtil _singleton = HttpUtil._();
-  factory HttpUtil() => _singleton;
+  static final NetDioUtil _singleton = NetDioUtil._();
+  factory NetDioUtil() => _singleton;
 
   ///
   //定义
