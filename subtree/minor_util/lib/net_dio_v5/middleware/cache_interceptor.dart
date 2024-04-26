@@ -1,3 +1,5 @@
+import 'package:shared_preferences/shared_preferences.dart';
+
 import '../net_dio.dart';
 
 /// 缓存拦截器
@@ -28,7 +30,8 @@ class NetCacheInterceptor extends Interceptor {
 
       // 删除磁盘缓存
       if (cacheDisk) {
-        await SpUtil.remove(options.uri.toString());
+        // await SharedPreferences.getInstance().remove(options.uri.toString());
+        (await SharedPreferences.getInstance()).remove(options.uri.toString());
       }
 
       return handler.next(options);
@@ -53,7 +56,8 @@ class NetCacheInterceptor extends Interceptor {
 
       // 2 磁盘缓存
       if (cacheDisk) {
-        var cacheData = SpUtil.getObject(key);
+        // var cacheData = (await SharedPreferences.getInstance()).getObject(key);
+        var cacheData = (await SharedPreferences.getInstance()).getString(key);
         if (cacheData != null) {
           return handler.resolve(Response(
             statusCode: 200,
@@ -85,7 +89,8 @@ class NetCacheInterceptor extends Interceptor {
 
       // 磁盘缓存
       if (options.extra["cacheDisk"] == true) {
-        await SpUtil.putObject(key, object.data);
+        // await SpUtil.putObject(key, object.data);
+        (await SharedPreferences.getInstance()).setString(key, object.data);
       }
 
       // 内存缓存
