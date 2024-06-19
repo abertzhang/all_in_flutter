@@ -89,7 +89,8 @@ dependencies:
   flutter_oss_aliyun: ^6.3.0
   # 文件压缩
   flutter_image_compress: ^2.1.0
-
+  #微信分享
+  fluwx: ^4.5.5
 
 
 
