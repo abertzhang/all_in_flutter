@@ -1,4 +1,4 @@
-import 'package:all_in_flutter/expand_text/expand_text.dart';
+import 'package:flutter/material.dart';
 
 class AnchorProperty {
   GlobalKey? key;
