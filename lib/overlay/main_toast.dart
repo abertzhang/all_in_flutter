@@ -1,5 +1,4 @@
 import 'dart:math';
-import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
@@ -38,7 +37,7 @@ class _HomePageState extends State<HomePage> {
           Toast.show(context: context, message: '自定的吐司', offset: position);
         },
         child: SizedBox(
-          width: MediaQueryData.fromWindow(window).size.width,
+          width: MediaQueryData.fromView(View.of(context)).size.width,
           child: Column(
             children: [
               const SizedBox(height: 100),

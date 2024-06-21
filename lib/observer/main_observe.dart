@@ -46,15 +46,11 @@ class _MainPageState extends State<MainPage> with WidgetsBindingObserver {
 
   @override
   void didChangeMetrics() {
-    WidgetsBinding.instance.addPostFrameCallback(
-      (_) {
-        if (MediaQuery.of(context).viewInsets.bottom == 0) {
-          debugPrint('关闭键盘');
-        } else {
-          debugPrint('打开键盘');
-        }
-      },
-    );
+    if (MediaQuery.of(context).viewInsets.bottom == 0) {
+      debugPrint('关闭键盘');
+    } else {
+      debugPrint('打开键盘');
+    }
   }
 
   @override
