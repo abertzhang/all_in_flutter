@@ -16,10 +16,15 @@ class DemoPage extends StatelessWidget {
   const DemoPage({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return const ColoredBox(
-      color: Colors.greenAccent,
-      child: MyRenderBoxWidget(
-        child: FlutterLogo(size: 200),
+    return GestureDetector(
+      onTap: () {
+        print('点击区域测试'); //区域外无法感应
+      },
+      child: const ColoredBox(
+        color: Colors.greenAccent,
+        child: MyRenderBoxWidget(
+          child: FlutterLogo(size: 200),
+        ),
       ),
     );
   }
@@ -38,7 +43,7 @@ class RenderMyRenderBox extends RenderBox with RenderObjectWithChildMixin {
   void performLayout() {
     child?.layout(constraints, parentUsesSize: true);
     // child?.layout(BoxConstraints.tight(const Size(50, 50)));
-    size = const Size(300, 600);
+    size = const Size(100, 200);
     // size = (child as RenderBox).size;
     // super.layout(constraints);
   }
@@ -48,7 +53,7 @@ class RenderMyRenderBox extends RenderBox with RenderObjectWithChildMixin {
     context.paintChild(child!, offset);
     context.canvas.drawCircle(offset, 2, Paint());
     context.pushOpacity(offset, 127, (context, offset) {
-      context.paintChild(child!, offset + Offset(130, 130));
+      context.paintChild(child!, offset + const Offset(10, 10));
     });
     // super.paint(context, offset);
   }

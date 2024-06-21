@@ -32,8 +32,6 @@ abstract mixin class WidgetsBindingObserver {
 }
 ```
 
-
-
 #### 常用方法
 
 ```dart
@@ -87,8 +85,12 @@ didChangeDependencies 则用来专门处理 State 对象依赖关系变化，会
   Widget build(BuildContext context) {}
 ```
 
+![img](http://qiniu-article.myflutter.cn/img/212614d1b3b1482fa0fe994aec1ab92d~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp)
 
+![img](http://qiniu-article.myflutter.cn/img/4b1bcc3a2bd94c0fb92de8ed08ef4e58~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp)
 
 ### 参考文档
 
 [Flutter 中的组件绘制完成监听、组件生命周期和APP生命周期](https://juejin.cn/post/6869761883030142983?from=search-suggest)
+
+[面试官问我State的生命周期，该怎么回答](https://juejin.cn/post/6908574202253541389)
