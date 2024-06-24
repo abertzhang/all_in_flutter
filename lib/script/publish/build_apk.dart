@@ -5,7 +5,7 @@ import 'package:yaml/yaml.dart';
 
 import 'pgy_tool.dart'; //蒲公英发布脚本，下面会给出
 
-void main(List<String> args) async {
+main() async {
   //是否上传蒲公英
   bool uploadPGY = true;
 
