@@ -83,6 +83,21 @@ class HistoryRouteObserver extends RouteObserver<PageRoute> {
     }
     //调用Navigator.of(context).replace( oldRoute:Route("old"),newRoute:Route("new")) 替换路由时回调
   }
+
+  @override
+  void didStartUserGesture(Route<dynamic> route, Route<dynamic>? previousRoute) {
+    print('didStartUserGesture');
+  }
+
+  @override
+  void didStopUserGesture() {
+    print('didStopUserGesture');
+  }
+
+  @override
+  void subscribe(RouteAware routeAware, PageRoute route) {
+    print('subscribe');
+  }
 }
 
 extension GetExtension on GetInterface {

@@ -3,8 +3,6 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
-import 'anchor_property.dart';
-
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   runApp(const MaterialApp(home: AnchorHomePage()));
@@ -29,12 +27,12 @@ class _AnchorHomePageState extends State<AnchorHomePage> {
     anchorProperties.add(AnchorProperty(id: '4', label: '国外', key: GlobalKey()));
   }
 
-  final GlobalKey _key = GlobalKey();
+  // final GlobalKey _key = GlobalKey();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      key: _key,
+      // key: _key,
       appBar: AppBar(title: const Text('锚点跳转')),
       body: _buildBody(),
     );
@@ -119,4 +117,12 @@ class _AnchorHomePageState extends State<AnchorHomePage> {
       ],
     );
   }
+}
+
+class AnchorProperty {
+  GlobalKey? key;
+  String id;
+  String label;
+
+  AnchorProperty({this.key, required this.id, required this.label});
 }

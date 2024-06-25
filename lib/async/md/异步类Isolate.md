@@ -409,3 +409,9 @@ void entryFunction(SendPort sendPort) {
 [官方-Dart中的并发](https://dart.cn/guides/language/concurrency#how-isolates-work)
 
 [深入了解Flutter的isolate(4) --- 使用Compute写isolates](https://juejin.cn/post/6844903760167190536)
+
+[Flutter 面试八股之深入理解 Dart 异步实现机制](https://juejin.cn/post/7383281753145475099?searchId=202406241507126C950C74EBD6F52D36BE)
+
+[Flutter开发-- Isolate](https://juejin.cn/post/7356852535318528050?searchId=20240624152605CC0D07E30C6ABF2BB793)
+
+[Dart: Isolate通信新范式](https://juejin.cn/post/7350541180616409140?searchId=20240624152605CC0D07E30C6ABF2BB793)
