@@ -7,14 +7,17 @@ void main() {
     ProviderScope(
       child: MaterialApp(
         // Home uses the default behavior for all providers.
-        home: HomePage(),
+        home: const HomePage(),
         routes: {
           // Overrides themeProvider for the /gallery route only
           '/gallery': (_) => ProviderScope(
                 overrides: [
                   themeProvider.overrideWithValue(ThemeMode.dark),
                 ],
-                child: Text('scope'),
+                child: const MaterialApp(
+                    home: Scaffold(
+                  body: Center(child: Text('第二页')),
+                )),
               ),
         },
       ),
@@ -24,18 +27,15 @@ void main() {
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Column(
-      children: [
-        TextButton(
-            onPressed: () {
-              Navigator.of(context).pushNamed('/gallery');
-            },
-            child: Text('跳转'))
-      ],
+        body: Center(
+      child: TextButton(
+          onPressed: () {
+            Navigator.of(context).pushNamed('/gallery');
+          },
+          child: const Text('跳转')),
     ));
   }
 }

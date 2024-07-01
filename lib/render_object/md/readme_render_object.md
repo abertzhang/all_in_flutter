@@ -95,9 +95,9 @@ visitChildrenForSemantics(RenderObjectVisitor visitor) → void
 
 ```dart
 //Inheritance
-Object 
-DiagnosticableTree 
-Widget 
+Object-> 
+DiagnosticableTree-> 
+Widget-> 
 RenderObjectWidget
 //Implementers
 ConstrainedLayoutBuilder
@@ -110,6 +110,14 @@ SliverWithKeepAliveWidget
 SlottedMultiChildRenderObjectWidget
 Table
 TwoDimensionalViewport  
+//平行类 
+PreferredSizeWidget
+ProxyWidget
+RenderObjectWidget
+RootWidget
+StatefulWidget
+StatelessWidget
+ViewCollection
 ```
 
 #### 属性
@@ -143,3 +151,5 @@ updateRenderObject(BuildContext context, covariant RenderObject renderObject) �
 [Widget、Element、Render是如何形成树结构？](https://juejin.cn/post/6921493845330886670)
 
 [Flutter 简单实现手写瀑布流 第一篇](https://juejin.cn/post/6968786815448776718)
+
+[Flutter中一个能获取行数的Wrap](https://juejin.cn/post/7331301209339707444)

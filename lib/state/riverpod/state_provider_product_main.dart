@@ -19,11 +19,11 @@ class HomePage extends ConsumerWidget {
               items: const [
                 DropdownMenuItem(
                   value: ProductType.name,
-                  child: Icon(Icons.sort_by_alpha),
+                  child: Icon(Icons.sort_by_alpha, color: Colors.blue),
                 ),
                 DropdownMenuItem(
                   value: ProductType.price,
-                  child: Icon(Icons.sort),
+                  child: Icon(Icons.sort, color: Colors.blue),
                 ),
               ],
               onChanged: (val) {

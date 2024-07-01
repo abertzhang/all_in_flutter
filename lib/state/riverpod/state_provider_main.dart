@@ -4,18 +4,14 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 // A Counter example implemented with riverpod
 
 void main() {
-  runApp(
-    const ProviderScope(child: MyApp()),
-  );
+  runApp(const ProviderScope(child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(home: Home());
-  }
+  Widget build(BuildContext context) => const MaterialApp(home: Home());
 }
 
 final counterProvider = StateProvider((ref) => 0);
