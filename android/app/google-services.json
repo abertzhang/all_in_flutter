@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "125326297944",
+    "project_id": "ahom-280d5",
+    "storage_bucket": "ahom-280d5.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:125326297944:android:f010c002e0404ef8f5732d",
+        "android_client_info": {
+          "package_name": "cn.myflutter.all_in_flutter"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCRtXK18BxU-zYHZnxBC-zqIRdefmP3iSY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
